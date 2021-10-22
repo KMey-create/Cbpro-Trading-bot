@@ -23,17 +23,15 @@ loger.setLevel(logging.DEBUG)
 ### Logger  ###
 
 
-
 with open('orders.json', 'r') as filos:
     positions = json.loads(filos.read())
 
 
 
 
-
-public = '58fb054b8b431619a1989fbe1f8ae4e7'
-passphrase = 'su9bsowyv2m'
-secret = 'wLh6fZRV/K6fjc8GQC+RHao7LZOKau0Wjt0Z0x8AKNqLGszuyNqs6Hc+k2VHk1uLKKVFpFycD7yeL1CYARWBdw=='
+public = ''
+passphrase = ''
+secret = ''
 
 
 auth_client = cbpro.AuthenticatedClient(key= public, passphrase= passphrase, b64secret= secret)
@@ -204,9 +202,6 @@ def main():
 
 
 
-
-
-
         elif rsi >= 70 and direction == "sell":
 
             print("Selling initiated ::", ticker)
@@ -246,29 +241,7 @@ def main():
 
 
 
-
-
-
 if __name__ == '__main__':
     while True:
 
         main()
-
-#selling_price = 3300
-#sell_amount = 0.3
-
-#buying_price = 3000
-#buy_amount = 0.2
-
-#while True:
-#    price = float(auth_client.get_product_ticker(product_id="ETH-EUR")['price'])
-#    if price <= buying_price:
-#        auth_client.buy(product_id="ETH-EUR", order_type="market", price=buy_amount)
-#        print("Buying")
-#    elif price >= selling_price:
-#       auth_client.sell(product_id='ETH-EUR', size=sell_amount, order_type='market')
-#        print("Selling")
-#   else:
-#       print(price, ' -Nothing')
-#
-#    time.sleep(5)
