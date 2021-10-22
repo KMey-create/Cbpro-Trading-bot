@@ -1,5 +1,11 @@
 # Cbpro-Trading-bot
-Trading bot via CBpro module, including pandas
+Trading bot via CBpro module
 
 
-Basic trading bot based on  EMA calculating and RSI, including logger and order writing
+CoinBase Pro account needed for API public, secret key and passphrase.
+
+
+Basic trading bot based on  EMA calculating and RSI, including logger and order writing.
+
+
+orders.json file made for writing executed orders.
